@@ -1,0 +1,10 @@
+
+.ui.borderless.inverted.menu {
+  background-color: #283658;
+  margin: 0px;
+  border-radius: 0px;
+}
+
+#login-buttons a, .accounts-dialog a{
+  color: rgba(255, 255, 255, 0.9);
+}

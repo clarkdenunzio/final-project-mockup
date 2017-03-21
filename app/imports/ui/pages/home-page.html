@@ -1,0 +1,72 @@
+<template name="Home_Page">
+  <div class="ui container">
+
+    {{#if Template.subscriptionsReady}}
+    <table style="margin-top: 20px" class="ui celled table">
+      <thead>
+      <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      {{#each contact in contactsList}}
+      <tr>
+        <td>{{contact.first}}</td>
+        <td>{{contact.last}}</td>
+        <td>{{contact.address}}</td>
+        <td>{{contact.telephone}}</td>
+        <td>{{contact.email}}</td>
+        <td><a href="{{pathFor 'Edit_Contact_Page' _id=contacts._id}}">Edit</a></td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    {{> Loading}}
+    {{/if}}
+
+    <table style="margin-top: 20px;" class="ui celled table">
+
+      <thead>
+      <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Phil</td>
+        <td>Johnson</td>
+        <td>123 fake street</td>
+        <td>123-456-7890</td>
+        <td>phil@johnson.com</td>
+      </tr>
+      <tr>
+        <td>Henri</td>
+        <td>Casanova</td>
+        <td>124 fake street</td>
+        <td>123-654-7890</td>
+        <td>Henri@cassanova.com</td>
+      </tr>
+      <tr>
+        <td>Kim</td>
+        <td>B</td>
+        <td>125 fake street</td>
+        <td>123-456-0987</td>
+        <td>kim@b.com</td>
+      </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+</template>
