@@ -8,38 +8,52 @@ FlowRouter.route('/', {
   },
 });
 
-FlowRouter.route('/add-contact', {
-  name: 'Add_Contact_Page',
+FlowRouter.route('/landing-page', {
+  name: 'Landing_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Add_Contact_Page' });
+    BlazeLayout.render('App_Body', { main: 'Landing_Page' });
   },
 });
 
-FlowRouter.route('/edit-contact/:id', {
-  name: 'Edit_Contact_Page',
+FlowRouter.route('/login-page', {
+  name: 'Login_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Edit_Contact_Page' });
+    BlazeLayout.render('App_Body', { main: 'Login_Page' });
   },
 });
 
-FlowRouter.route('/list', {
-  name: 'List_Stuff_Page',
+FlowRouter.route('/user-home', {
+  name: 'User_Home_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'List_Stuff_Page' });
+    BlazeLayout.render('App_Body', { main: 'User_Home_Page' });
   },
 });
 
-FlowRouter.route('/add', {
-  name: 'Add_Stuff_Page',
+FlowRouter.route('/admin-home', {
+  name: 'Admin_Home_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Add_Stuff_Page' });
+    BlazeLayout.render('App_Body', { main: 'Admin_Home_Page' });
   },
 });
 
-FlowRouter.route('/stuff/:_id', {
-  name: 'Edit_Stuff_Page',
+FlowRouter.route('/user-profile', {
+  name: 'User_Profile_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Edit_Stuff_Page' });
+    BlazeLayout.render('App_Body', { main: 'User_Profile_Page' });
+  },
+});
+
+FlowRouter.route('/foods-available', {
+  name: 'Foods_Available_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Foods_Available_Page' });
+  },
+});
+
+FlowRouter.route('/todays-picks', {
+  name: 'Todays_Picks_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Todays_Picks_Page' });
   },
 });
 
